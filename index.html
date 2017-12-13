@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Chris Carlson Travels - Home</title>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/mapdata/custom/world.js"></script>
+
+    <!-- CSS STYLES FOR THIS TEMPLATE -->
+    
+    <style>
+    
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126 License: none (public domain) 
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    font-size: 100%;
+	    font: inherit;
+	    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+	    display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+    	list-style: none;
+    }
+    blockquote, q {
+	    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+	    content: '';
+	    content: none;
+    }
+    table {
+	    border-collapse: collapse;
+	    border-spacing: 0;
+    }
+    /* END OF CSS RESET */
+    
+    body {
+        padding-top: 5rem;
+    }
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', Helvetica, sans-serif;
+	    font-size: 1em;
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: normal;
+        overflow-x: hidden;
+    }
+    .logo {
+	   font-family: 'Pacifico', Helvetica, sans-serif;
+	   font-size: 1.35em;
+	   font-style: normal;
+	   font-variant: normal;
+	   font-weight: 0;
+	   color: #2b2b2b;
+	   line-height: 5.4px;
+	   margin-top: 10px;
+	   margin-bottom: 10px;
+	   margin-right: 40px;
+	   -webkit-font-smoothing: antialiased;
+        text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+    }
+    .compass {
+        display: inline-block;
+        max-height: 95px;
+        bottom: 7%;
+        position: absolute;
+    }
+    #container {
+        min-height: 530px;
+        max-height: 530px;
+        min-width: 90%; 
+        max-width: 90%;
+        padding-top:0%;
+        margin: 8px auto;
+    }
+    .footer {
+        font-size: .8em;
+        color: #ABB2B9;
+        display: inline-block;
+        text-align: center;
+    }
+    .nav-item {
+        font-family: calibri;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.2em;
+        color: gray;
+    }
+    a {
+        color: #ABB2B9;
+    }
+    .albums {
+        display: inline-block;
+        text-align: center;
+    }
+    h2 {
+        font-family: calibri;
+        font-weight: normal;
+        font-style: italic;
+        font-size: 1.25em;
+        color: #202020;
+        margin-bottom: 10px;
+    }
+    hr.worldmap {
+        overflow: visible;
+        margin-top: 80px;
+        margin-bottom: 25px;
+        padding: 0;
+        border: none;
+        border-top: medium double #FFF;
+        color: #202020;
+        text-align: center;
+    }
+    hr.worldmap:after {
+        content: " Instructions: Explore my travels by selecting a highlighted country below or click on a photo below to view new photos: ";
+        display: inline-block;
+        position: relative;
+        top: -0.20em;
+        font-size: 1em;
+        padding: 0 0.25em;
+        background: white;
+    }
+    hr.recenttrips {
+        overflow: visible;
+        padding: 0;
+        border: none;
+        border-top: medium double #333;
+        color: #202020;
+        text-align: center;
+    }
+    hr.recenttrips:after {
+        content: " Recent Trips ";
+        display: inline-block;
+        position: relative;
+        top: -0.62em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+    }
+    hr.archivedtrips {
+        overflow: visible;
+        padding: 0;
+        border: none;
+        border-top: medium double #333;
+        color: #202020;
+        text-align: center;
+    }
+    hr.archivedtrips:after {
+        content: " Archived Trips ";
+        display: inline-block;
+        position: relative;
+        top: -0.62em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+    }
+    path {
+        stroke: gray;
+    }
+    @media(max-width: 767px) {
+        .container {
+        width: auto;
+    }
+    </style>
+</head>
+<body>
+<div class="container">
+    
+    <!–– START OF NAVIGATION BAR ––>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand logo" href="http://www.chriscarlsontravels.com">Chris Carlson Travels</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="http://www.chriscarlsontravels.com/index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.chriscarlsontravels.com/about.html">About the Traveler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.chriscarlsontravels.com/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    
+    <!–– END OF NAVIGATION BAR ––>
+    
+</div>
+<main role="main" class="container">
+    <div class="row">
+        
+        <!–– START MAP TAG FOR GRAPHICAL MAP DISPLAY ––>
+        
+        <hr class="worldmap">
+        
+        <!–– END MAP TAG FOR GRAPHICAL MAP DISPLAY ––>
+        
+        <div class="col-10 col-md" id="container"></div>
+        <div class="col-2 col-md"><p><img src="images/compass.jpg" class="compass" width="80px" alt="Compass"></p></div>
+    </div>
+<hr class="recenttrips">
+<h2>Olympic National Park, Washington - United States</h2>
+
+    <!-- START OF ARRAY OF SLIDES FOR PHOTOSWIPE -->
+    
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-olympic-1.jpg" itemprop="thumbnail" alt="Olympic National Park, Washington" />
+      </a>
+    <figcaption itemprop="caption description">Ruby Beach looking towards Destruction Island Lighthouse, Olympic Peninsula Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-2.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-2.jpg" itemprop="thumbnail" alt="Olympic National Park, Washington" />
+      </a>
+      <figcaption itemprop="caption description">Ruby Beach, Olympic Peninsula Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-3.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-3.jpg" itemprop="thumbnail" alt="Olympic National Park, Washington" />
+      </a>
+      <figcaption itemprop="caption description">Driftwood on Ruby Beach, Olympic Peninsula Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-4.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-4.jpg" itemprop="thumbnail" alt="Olympic National Park, Washington" />
+      </a>
+      <figcaption itemprop="caption description">Olympic Mountains, Olympic National Park Washington</figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-5.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-5.jpg" itemprop="thumbnail" alt="Olympic National Park, Washington" />
+      </a>
+      <figcaption itemprop="caption description">View of the Olympic Mountain Range, Olympic National Park Washington</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-6.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-6.jpg" itemprop="thumbnail" alt="Olympic National Park, Washington" />
+      </a>
+      <figcaption itemprop="caption description">View of the Olympic Mountains, Olympic National Park Washington</figcaption>
+    </figure>
+    </div>
+    
+    <!-- END OF ARRAY OF SLIDES FOR PHOTOSWIPE -->
+    
+    <h2>&nbsp;</h2>
+    <h2>&nbsp;</h2>
+    <h2>&nbsp;</h2>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-bottom footer"> Copyright © 2017 ChrisCarlsonTravels.com.&emsp;Photographs may not be used without permission.&emsp;Hosted by <a href="http://www.a2hosting.com" target=_blank>A2Hosting.com</a>.
+    </nav>
+    </main>
+    <!-- ROOT ELEMENT FOR PHOTOSWIPE -->
+    
+        <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- DEFINE BACKGROUND OF PHOTOSWIPE -->
+    
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+
+    <!-- CONTAINER FOR SLIDES, MEMORY RETAINS ONLY 3 IN HISTORY TO SAVE DOM MEMORY -->
+    
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+    </div>
+</body>
+<script>
+
+    // INITIALIZES MAP USING HIGHCHARTS MAP CONSTRUCTOR
+    // https://www.highcharts.com/docs/maps/getting-started
+    
+    Highcharts.mapChart('container', {
+    chart: {
+        events: {
+            load: function() {
+            this.mapZoom(0.55, -2000, -8200);
+          }
+        },
+        borderWidth: 0
+    },
+    
+    title: {
+        text: ''
+    },
+    subtitle: {
+        text: ''
+    },
+
+    legend: {
+        enabled: false
+    },
+
+    // DEFINE SERIES USING HIGHMAPS CONSTRUCTOR
+    // https://api.highcharts.com/highmaps/#series.data
+    
+    // DEFINE MAP TYPE AND HIGHLIGHTED COUNTRIES BELOW
+    
+    series: [{
+        name: 'Locations',
+        mapData: Highcharts.maps['custom/world'],
+        data: [
+            ['se', 'sweden'],
+            ['fr', 'france'],
+            ['dk', 'denmark'],
+            ['us', 'unitedstates'],
+            ['ca', 'canada']
+        ],
+    // DEFINE MAP HOVER STATE FORMATTING
+    
+        states: {
+                hover: {
+                    color: 'navy'
+                }
+            },
+    // DEFINE LABEL FORMATTING
+    
+        dataLabels: {
+            enabled: false,
+            shape: 'callout',
+            format: '{point.name}',
+            y: -20,
+            x: 50,
+            allowOverlap: true,
+            borderWidth: 1,
+            borderColor: 'black',
+            useHTML: true,
+            formatter: function () {
+                if (this.point.value) {
+                    return this.point.name;
+                }
+            }
+        },
+        tooltip: {
+            headerFormat: '',
+            pointFormat: '{point.name}'
+        }
+    }],
+    
+    // DEFINE PLOT OPTIONS AND FORMATTED URL FOR CLICK EVENTS
+    
+        plotOptions: {
+        series: {
+            cursor: 'pointer',
+            point: {
+                events: {
+                    click: function () {
+                        location.href = 'http://www.chriscarlsontravels.com/' +
+                            this.options.value + '.html';
+                    }
+                }
+            }
+        }
+    },
+});
+
+
+</script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js'></script>
+<script  src="js/index.js"></script>
+</html>
