@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Christopher Carlson" />
+<meta name="copyright" content="ChrisCarlsonTravels.com" />
+<meta name="robots" content="follow"/>
+<head>
+    <title>Chris Carlson Travels - Home</title>
+    <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css'>
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css'>
+    <link rel="stylesheet" href="css/style.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/proj4js/2.3.6/proj4.js"></script>
+   <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/us/us-all.js"></script></script>
+
+    <!-- CSS STYLES FOR THIS TEMPLATE -->
+    
+    <style>
+    
+    /* http://meyerweb.com/eric/tools/css/reset/ 
+    v2.0 | 20110126 License: none (public domain) 
+    */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+	    margin: 0;
+	    padding: 0;
+	    border: 0;
+	    font-size: 100%;
+	    font: inherit;
+	    vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+	    display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+    	list-style: none;
+    }
+    blockquote, q {
+	    quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+	    content: '';
+	    content: none;
+    }
+    table {
+	    border-collapse: collapse;
+	    border-spacing: 0;
+    }
+    /* END OF CSS RESET */
+    
+    body {
+        padding-top: 5rem;
+    }
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', Helvetica, sans-serif;
+	    font-size: 1em;
+	    font-style: normal;
+	    font-variant: normal;
+	    font-weight: normal;
+        overflow-x: hidden;
+    }
+    .logo {
+	   font-family: 'Pacifico', Helvetica, sans-serif;
+	   font-size: 1.35em;
+	   font-style: normal;
+	   font-variant: normal;
+	   font-weight: 0;
+	   color: #2b2b2b;
+	   line-height: 5.4px;
+	   margin-top: 10px;
+	   margin-bottom: 10px;
+	   margin-right: 40px;
+	   -webkit-font-smoothing: antialiased;
+        text-shadow: 3px 3px 0px rgba(0,0,0,0.1), 7px 7px 0px rgba(0,0,0,0.05);
+    }
+    #container {
+        min-height: 530px;
+        max-height: 530px;
+        min-width: 90%; 
+        max-width: 90%;
+        padding-top:0%;
+        margin: 8px auto;
+    }
+    .footer {
+        font-size: .8em;
+        color: #ABB2B9;
+        display: inline-block;
+        text-align: center;
+    }
+    .nav-item {
+        font-family: calibri;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.2em;
+        color: gray;
+    }
+    a {
+        color: #ABB2B9;
+    }
+    a.customlinks {
+        color: blue;
+    }
+    a.map {
+        color: black;
+        hover: blue;
+        font-family: calibri;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 1.2em;
+    }
+    .albums {
+        display: inline-block;
+        text-align: center;
+    }
+    h2 {
+        font-family: calibri;
+        font-weight: normal;
+        font-style: italic;
+        font-size: 1.25em;
+        color: #202020;
+        margin-bottom: 10px;
+    }
+    hr.worldmap {
+        overflow: visible;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        padding: 0;
+        border: none;
+        border-top: medium double #FFF;
+        color: #202020;
+        text-align: center;
+    }
+    hr.worldmap:after {
+        content: " Explore United States of America ";
+        display: inline-block;
+        position: relative;
+        top: -0.20em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+    }
+    hr.instructions {
+        overflow: visible;
+        margin-top: 80px;
+        margin-bottom: 5px;
+        padding: 0;
+        border: none;
+        border-top: medium double #FFF;
+        color: #202020;
+        text-align: center;
+    }
+    hr.instructions:after {
+        content: " Next, scroll down and click on a photo below: ";
+        display: inline-block;
+        position: relative;
+        top: -0.20em;
+        font-size: 1em;
+        padding: 0 0.25em;
+        background: white;
+    }
+    hr.archivedtrips {
+        overflow: visible;
+        padding: 0;
+        border: none;
+        border-top: medium double #333;
+        color: #202020;
+        text-align: center;
+    }
+    hr.archivedtrips:after {
+        content: " Archived Trips ";
+        display: inline-block;
+        position: relative;
+        top: -0.62em;
+        font-size: 1.5em;
+        padding: 0 0.25em;
+        background: white;
+    }
+    path {
+        stroke: gray;
+    }
+    @media(max-width: 767px) {
+        .container {
+        width: auto;
+    }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    
+    <!–– START OF NAVIGATION BAR ––>
+    
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand logo" href="http://www.chriscarlsontravels.com">Chris Carlson Travels</a>
+
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link active" href="http://www.chriscarlsontravels.com/index.html">Home<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://www.chriscarlsontravels.com/about.html">About the Traveler</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="https://www.chriscarlsontravels.com/contact.html">Contact</a>
+            </li>
+        </ul>
+    </div>
+    </nav>
+    
+    <!–– END OF NAVIGATION BAR ––>
+    
+</div>
+<main role="main" class="container">
+    <div class="row"><hr class="instructions"></div><div class="row">
+        
+        <!–– START MAP TAG FOR GRAPHICAL MAP DISPLAY ––>
+        
+        <hr class="worldmap">
+        
+        <!–– END MAP TAG FOR GRAPHICAL MAP DISPLAY ––>
+        
+        <div class="col-10 col-md" id="container"></div>
+        <div class="col-2 col-md"></div>
+    </div>
+<a href="http://www.chriscarlsontravels.com/index.html" class="customlinks">Return to World Map</a>
+<hr class="archivedtrips">
+<h2>Fort Soledad, Ritidian Beach, & Tumon Bay - Guam</h2>
+
+    <!-- START OF ARRAY OF SLIDES FOR PHOTOSWIPE -->
+    
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-1-min.jpg" itemprop="thumbnail" alt="Fort Soledad, Guam" />
+      </a>
+    <figcaption itemprop="caption description">Fort Nuestra Señora de la Soledad looking towards the village of Umatac and the vast ocean, Umatac Guam</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-2-min.jpg" itemprop="thumbnail" alt="Fort Soledad, Guam" />
+      </a>
+      <figcaption itemprop="caption description">Replica Spanish Canon at Fort Nuestra Señora de la Soledad, Umatac Guam</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-3-min.jpg" itemprop="thumbnail" alt="Fort Soledad, Guam" />
+      </a>
+      <figcaption itemprop="caption description">Replica Spanish Canons at Fort Nuestra Señora de la Soledad, Umatac Guam</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-4-min.jpg" itemprop="thumbnail" alt="Fort Soledad, Guam" />
+      </a>
+      <figcaption itemprop="caption description">Looking through Fort Nuestra Señora de la Soledad's fortress window, Umatac Guam</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-5.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-5-min.jpg" itemprop="thumbnail" alt="Fort Soledad, Guam" />
+      </a>
+      <figcaption itemprop="caption description">Horizon at Fort Nuestra Señora de la Soledad's fortress window, Umatac Guam</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-6.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-6-min.jpg" itemprop="thumbnail" alt="Fort Soledad, Guam" />
+      </a>
+      <figcaption itemprop="caption description">San Dionisio Catholic Church (circa 1680), Umatac Guam</figcaption>
+    </figure>
+    
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-7.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-7-min.jpg" itemprop="thumbnail" alt="Umatac Guam" />
+      </a>
+    <figcaption itemprop="caption description">Cross and Ocean, Umatac Guam</figcaption>
+    </figure>
+    
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-8.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-8-min.jpg" itemprop="thumbnail" alt="Ritidian Beach Guam" />
+      </a>
+    <figcaption itemprop="caption description">Beach garden at Ritidian's White Coral Sand Beach, Ritidian Beach Guam</figcaption>
+    </figure>
+    
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-9.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-9-min.jpg" itemprop="thumbnail" alt="Ritidian Beach Guam" />
+      </a>
+    <figcaption itemprop="caption description">Sunrise, Ritidian Beach Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-10.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-10-min.jpg" itemprop="thumbnail" alt="Ritidian Beach Guam" />
+      </a>
+    <figcaption itemprop="caption description">Calm waters in coral reef, Tumon Bay Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-11.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-11-min.jpg" itemprop="thumbnail" alt="Tumon Bay Guam" />
+      </a>
+    <figcaption itemprop="caption description">Palm trees lined against beach, Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-12.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-12-min.jpg" itemprop="thumbnail" alt="Tumon Bay Guam" />
+      </a>
+    <figcaption itemprop="caption description">Palm trees and beach, Tumon Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-13.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-13-min.jpg" itemprop="thumbnail" alt="Hagåtña, Guam" />
+      </a>
+    <figcaption itemprop="caption description">Ruins of Spanish Arches, Hagåtña, Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-14.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-14-min.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+    <figcaption itemprop="caption description">A Catholic Church at Christmas, Hagåtña, Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-15.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-15-min.jpg" itemprop="thumbnail" alt="Old Inarajan Church" />
+      </a>
+    <figcaption itemprop="caption description">Old Inarajan Church ruins, Inarajan Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-16.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-16-min.jpg" itemprop="thumbnail" alt="Lover's Point, Guam" />
+      </a>
+    <figcaption itemprop="caption description">Lookout at Two Lover's Point, Guam</figcaption>
+    </figure>
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-guam-17.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-guam-17-min.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+    <figcaption itemprop="caption description">St. Probus Holy Chapel, Tumon Guam</figcaption>
+    </figure>
+    </div>
+<h2>&nbsp;</h2>    
+<h2>Catalina Island - California</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-1-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+    <figcaption itemprop="caption description">The harbor of Avalon with historic casino in background, Catalina Island California</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-2-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+      <figcaption itemprop="caption description">Harbor of Avalon with view of sailboats, Catalina Island California</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-3-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+      <figcaption itemprop="caption description">Avalon Harbor yachts and boats, Catalina Island California</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-4-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+      <figcaption itemprop="caption description">The historic Catalina Casino, Catalina Island California</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-5.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-5-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+      <figcaption itemprop="caption description">A Catalina Island Treehouse, Catalina Island California</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-6.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-6-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+      <figcaption itemprop="caption description">Ferocactus Viridescens – Coast Barrel Cactus, Catalina Island California</figcaption>
+    </figure>
+    
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-7.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-7-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+    <figcaption itemprop="caption description">Door to the Wrigley Memorial, Catalina Island California</figcaption>
+    </figure>
+    
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-8.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-8-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+    <figcaption itemprop="caption description">Tile from the Catalina Pottery plant adorned on the Wrigley Memorial, Catalina Island California</figcaption>
+    </figure>
+    
+        <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-catalina-9.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-catalina-9-min.jpg" itemprop="thumbnail" alt="Catalina Island" />
+      </a>
+    <figcaption itemprop="caption description">Overlook from Wrigley Memorial, Catalina Island California</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2> 
+    <h2>Puʻuhonua o Hōnaunau National Park - Hawaii</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-puuhonua-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-puuhonua-1-min.jpg" itemprop="thumbnail" alt="Puʻuhonua o Hōnaunau National Park" />
+      </a>
+    <figcaption itemprop="caption description">Tiki totems at Puʻuhonua o Hōnaunau National Park, Hawaii Island Hawaii</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-puuhonua-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-puuhonua-2-min.jpg" itemprop="thumbnail" alt="Puʻuhonua o Hōnaunau National Park" />
+      </a>
+      <figcaption itemprop="caption description">Tiki totem at Puʻuhonua o Hōnaunau National Park, Hawaii Island Hawaii</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-puuhonua-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-puuhonua-3-min.jpg" itemprop="thumbnail" alt="Puʻuhonua o Hōnaunau National Park" />
+      </a>
+      <figcaption itemprop="caption description">Tiki Hut at Puʻuhonua o Hōnaunau National Park, Hawaii Island Hawaii</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-puuhonua-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-puuhonua-4-min.jpg" itemprop="thumbnail" alt="Puʻuhonua o Hōnaunau National Park" />
+      </a>
+      <figcaption itemprop="caption description">Volcanic rock fields at Puʻuhonua o Hōnaunau National Park, Hawaii Island Hawaii</figcaption>
+    </figure>
+    </div>
+<h2>&nbsp;</h2> 
+    <h2>Ohau Beaches, Waipio Valley & North Shore - Hawaii</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-ohau-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-ohau-1-min.jpg" itemprop="thumbnail" alt="Oahu Hawaii" />
+      </a>
+    <figcaption itemprop="caption description">Beautiful vista from the Waipio Valley Overlook on the Hamakua Coast, Oahu Hawaii</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-ohau-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-ohau-2-min.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="Oahu Hawaii">North Shore, Ohau Hawaii</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-ohau-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-ohau-3-min.jpg" itemprop="thumbnail" alt="Image description" />
+      </a>
+      <figcaption itemprop="Oahu Hawaii">Waimea Bay and Beach, Ohau Hawaii</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2>
+    <h2>Orcas Island - Washington</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-orcas-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-orcas-1-min.jpg" itemprop="thumbnail" alt="Orcas Island Washington" />
+      </a>
+    <figcaption itemprop="caption description">View of islands from Mount Constitution's lookout tower, Orcas Island Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-orcas-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-orcas-2-min.jpg" itemprop="thumbnail" alt="Orcas Island Washington" />
+      </a>
+      <figcaption itemprop="caption description">Inlet and Waterway, Orcas Island Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-orcas-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-orcas-3-min.jpg" itemprop="thumbnail" alt="Orcas Island Washington" />
+      </a>
+      <figcaption itemprop="caption description">House and harbor, Orcas Island Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-orcas-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-orcas-4-min.jpg" itemprop="thumbnail" alt="Orcas Island Washington" />
+      </a>
+      <figcaption itemprop="caption description">Barn on scenic farm, Orcas Island Washington</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-orcas-5.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-orcas-5-min.jpg" itemprop="thumbnail" alt="Orcas Island Washington" />
+      </a>
+      <figcaption itemprop="caption description">Barn on scenic farm, Orcas Island Washington</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2>
+    <h2>Olympic National Park - Washington</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-olympic-1.jpg" itemprop="thumbnail" alt="Olympic National Park" />
+      </a>
+    <figcaption itemprop="caption description">Ruby Beach looking towards Destruction Island Lighthouse, Olympic Peninsula Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-2.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-2.jpg" itemprop="thumbnail" alt="Olympic National Park" />
+      </a>
+      <figcaption itemprop="caption description">
+Ruby Beach, Olympic Peninsula Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-3.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-3.jpg" itemprop="thumbnail" alt="Olympic National Park" />
+      </a>
+      <figcaption itemprop="caption description">Driftwood on Ruby Beach, Olympic Peninsula Washington</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-4.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-4.jpg" itemprop="thumbnail" alt="Olympic National Park" />
+      </a>
+      <figcaption itemprop="caption description">Olympic Mountains, Olympic National Park Washington</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-5.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-5.jpg" itemprop="thumbnail" alt="Olympic National Park" />
+      </a>
+      <figcaption itemprop="caption description">View of the Olympic Mountain Range, Olympic National Park Washington</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-olympic-6.jpg" itemprop="contentUrl" data-size="1024x575">
+          <img src="images/albums/unitedstates/us-olympic-6.jpg" itemprop="thumbnail" alt="Olympic National Park" />
+      </a>
+      <figcaption itemprop="caption description">View of the Olympic Mountains, Olympic National Park Washington</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2>
+    <h2>Yellowstone & Grand Teton National Parks - Montana & Wyoming</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-yellowstone-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-yellowstone-1.jpg" itemprop="thumbnail" alt="Grand Teton National Park Wyoming" />
+      </a>
+    <figcaption itemprop="caption description">Geese strolling in front of Grand Teton Mountains, Grand Teton National Park Wyoming</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-yellowstone-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-yellowstone-2.jpg" itemprop="thumbnail" alt="Grand Teton National Park Wyoming" />
+      </a>
+      <figcaption itemprop="caption description">Trail at base of Grand Tetons, Grand Teton National Park Wyoming</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-yellowstone-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-yellowstone-3.jpg" itemprop="thumbnail" alt="Yellowstone National Park Montana" />
+      </a>
+      <figcaption itemprop="caption description">Yellowstone Winter, Yellowstone National Park Montana</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-yellowstone-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-yellowstone-4.jpg" itemprop="thumbnail" alt="Yellowstone National Park Montana" />
+      </a>
+      <figcaption itemprop="caption description">Steam Vents at Yellowstone, Yellowstone National Park Montana</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-yellowstone-5.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-yellowstone-5.jpg" itemprop="thumbnail" alt="Yellowstone National Park Montana" />
+      </a>
+      <figcaption itemprop="caption description">Park Entrance at Yellowstone, Yellowstone National Park Montana</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-yellowstone-6.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-yellowstone-6.jpg" itemprop="thumbnail" alt="Grand Teton National Park Wyoming" />
+      </a>
+      <figcaption itemprop="caption description">Park Entrance at Grand Tetons, Grand Teton National Park Wyoming</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2>
+    <h2>White Sands - New Mexico</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-whitesands-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-whitesands-1.jpg" itemprop="thumbnail" alt="White Sands National Monument New Mexico" />
+      </a>
+    <figcaption itemprop="caption description">Sand Dunes and Plants, White Sands National Monument New Mexico</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-whitesands-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-whitesands-2.jpg" itemprop="thumbnail" alt="White Sands National Monument New Mexico" />
+      </a>
+      <figcaption itemprop="caption description">Sand Dunes and Plants, White Sands National Monument New Mexico</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-whitesands-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-whitesands-3.jpg" itemprop="thumbnail" alt="White Sands National Monument New Mexico" />
+      </a>
+      <figcaption itemprop="caption description">Sand Dunes and Plants, White Sands National Monument New Mexico</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-whitesands-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-whitesands-4.jpg" itemprop="thumbnail" alt="White Sands National Monument New Mexico" />
+      </a>
+      <figcaption itemprop="caption description">Sand Dunes and Plants, White Sands National Monument New Mexico</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2>
+    <h2>Washington Monuments - Washington, DC</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-washingtondc-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-washingtondc-1-min.jpg" itemprop="thumbnail" alt="Washington DC" />
+      </a>
+    <figcaption itemprop="caption description">Washington Monument looking toward sky, Washington DC</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-washingtondc-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-washingtondc-2-min.jpg" itemprop="thumbnail" alt="Washington DC" />
+      </a>
+      <figcaption itemprop="caption description">National Mall Overlook, Washington DC</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-washingtondc-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-washingtondc-3-min.jpg" itemprop="thumbnail" alt="Washington DC" />
+      </a>
+      <figcaption itemprop="caption description">Lincoln Memorial Building, Washington DC</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-washingtondc-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-washingtondc-4-min.jpg" itemprop="thumbnail" alt="Washington DC" />
+      </a>
+      <figcaption itemprop="caption description">At the base of the Lincoln Memorial, Washington DC</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-washingtondc-5.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-washingtondc-5-min.jpg" itemprop="thumbnail" alt="Washington DC" />
+      </a>
+      <figcaption itemprop="caption description">Vietnam Veterans Memorial display, Washington DC</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2>
+    <h2>Mount Rushmore - South Dakota</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-rushmore-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-rushmore-1-min.jpg" itemprop="thumbnail" alt="Mount Rushmore National Monument South Dakota" />
+      </a>
+    <figcaption itemprop="caption description">Iconic Mount Rushmore, Mount Rushmore National Monument South Dakota</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-rushmore-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-rushmore-2-min.jpg" itemprop="thumbnail" alt="Mount Rushmore National Monument South Dakota" />
+      </a>
+      <figcaption itemprop="caption description">Entrance framed at Mount Rushmore, Mount Rushmore National Monument South Dakota</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-rushmore-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-rushmore-3-min.jpg" itemprop="thumbnail" alt="Mount Rushmore National Monument South Dakota" />
+      </a>
+      <figcaption itemprop="caption description">Flags of the United States at Mount Rushmore, Mount Rushmore National Monument South Dakota</figcaption>
+    </figure>
+    </div>
+    <h2>&nbsp;</h2>
+    <h2>Chicago - Illinois</h2>
+
+    <div class="my-gallery albums" itemscope itemtype="http://schema.org/ImageGallery">
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-chicago-1.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-chicago-1-min.jpg" itemprop="thumbnail" alt="Chicago" />
+      </a>
+    <figcaption itemprop="caption description">Downtown Chicago fron the mouth of the Chicago River, Chicago Illinois</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-chicago-2.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-chicago-2-min.jpg" itemprop="thumbnail" alt="Chicago" />
+      </a>
+      <figcaption itemprop="caption description">Lake Street Bridge with "El" Train, Chicago Illinois</figcaption>
+    </figure>
+
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-chicago-3.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-chicago-3-min.jpg" itemprop="thumbnail" alt="Chicago" />
+      </a>
+      <figcaption itemprop="caption description">The iconic railroad bridge just south of the Kinzie Street Bridge on the North Branch of the Chicago River, Chicago Illinois</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-chicago-4.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-chicago-4-min.jpg" itemprop="thumbnail" alt="Chicago" />
+      </a>
+      <figcaption itemprop="caption description">The Clark Street Bridge spanning the Chicago River, Chicago Illinois</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-chicago-5.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-chicago-5-min.jpg" itemprop="thumbnail" alt="Chicago" />
+      </a>
+      <figcaption itemprop="caption description">Merchandise Mart - largest building in the world in 1930, Chicago Illinois</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-chicago-6.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-chicago-6-min.jpg" itemprop="thumbnail" alt="Chicago" />
+      </a>
+      <figcaption itemprop="caption description">Historic Navy Pier, Chicago Illinois</figcaption>
+    </figure>
+    
+    <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+      <a href="images/albums/unitedstates/us-chicago-7.jpg" itemprop="contentUrl" data-size="1024x576">
+          <img src="images/albums/unitedstates/us-chicago-7-min.jpg" itemprop="thumbnail" alt="Chicago" />
+      </a>
+      <figcaption itemprop="caption description">Chicago Harbor Lighthouse looking towards Lake Michigan, Chicago Illinois</figcaption>
+    </figure>
+    </div>
+    
+    <!-- END OF ARRAY OF SLIDES FOR PHOTOSWIPE -->
+    
+    <h2>&nbsp;</h2>
+    <a href="http://www.chriscarlsontravels.com/index.html" class="customlinks">Return to World Map</a>
+    <h2>&nbsp;</h2>
+    <h2>&nbsp;</h2>
+    <nav class="navbar navbar-expand-md navbar-light bg-dark fixed-bottom footer"> Copyright © 2017 ChrisCarlsonTravels.com.&emsp;Photographs may not be used without permission.&emsp;Hosted by <a href="http://www.a2hosting.com" target=_blank>A2Hosting.com</a>.
+    </nav>
+    </main>
+    
+    <!-- ROOT ELEMENT FOR PHOTOSWIPE -->
+    
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- DEFINE BACKGROUND OF PHOTOSWIPE -->
+
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+
+    <!-- CONTAINER FOR SLIDES, MEMORY RETAINS ONLY 3 IN HISTORY TO SAVE DOM MEMORY -->
+
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+          </div>
+
+        </div>
+
+    </div>
+</body>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js'></script>
+<script  src="js/index.js"></script>
+<script>
+    
+    // INITIALIZES MAP USING HIGHCHARTS MAP CONSTRUCTOR
+    // https://www.highcharts.com/docs/maps/getting-started
+    
+    Highcharts.mapChart('container', {
+
+    title: {
+        text: ''
+    },
+
+    mapNavigation: {
+        enabled: false
+    },
+    
+    tooltip: { enabled: false },
+    
+    plotOptions: {
+            series: {
+                marker: {
+                    states: {
+                        hover: {
+                            enabled: false
+                        }
+                    }
+                }
+            }
+        },
+    
+    // DEFINE SERIES USING HIGHMAPS CONSTRUCTOR
+    // https://api.highcharts.com/highmaps/#series.data
+    
+    series: [{
+
+    // DEFINE LABEL FORMATTING
+    
+        mapData: Highcharts.maps['countries/us/us-all'],
+        name: 'Basemap',
+        borderColor: '#A0A0A0',
+        nullColor: 'rgba(200, 200, 200, 0.3)',
+        showInLegend: false
+    }, {
+        name: 'Separators',
+        type: 'mapline',
+        data: Highcharts.geojson(Highcharts.maps['countries/us/us-all'], 'mapline'),
+        color: '#FFFFFF',
+        showInLegend: false,
+        enableMouseTracking: false
+    }, {
+
+    // DEFINE LABEL FORMATTING
+
+        type: 'mappoint',
+        name: 'Locations',
+        showInLegend: false,
+        color: Highcharts.getOptions().colors[7],
+        data: [{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'White Sands National Monument',
+            lat: 32.233,
+            lon: -106.295,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: 30,
+            x: -180,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Fort Soledad, Ritidian Beach,<br/>& Tumon Bay, Guam',
+            lat: 18.817,
+            lon: -126.849,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: -30,
+            x: 100,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Catalina Island',
+            lat: 33.383,
+            lon: -118.433,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: 25,
+            x: -100,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Olympic National Park',
+            lat: 47.802,
+            lon: -123.604,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: 28,
+            x: -100,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Washington<br/>Monuments',
+            lat: 38.889,
+            lon: -77.035,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: -5,
+            x: 90,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Mount Rushmore',
+            lat: 43.524,
+            lon: -103.273,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: -102,
+            x: 110,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Yellowstone & <br/>Grand Teton<br/>National Parks',
+            lat: 44.423,
+            lon: -110.351,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: -58,
+            x: 70,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Orcas Island',
+            lat: 48.391,
+            lon: -122.561,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: 5,
+            x: -115,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Chicago',
+            lat: 41.878,
+            lon: -87.629,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: -60,
+            x: 100,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Puʻuhonua o Hōnaunau National Park',
+            lat: 19.896,
+            lon: -155.58,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: 0,
+            x: 200,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        },{
+            shape: 'callout',
+            mapData: Highcharts.maps['countries/us/us-all'],
+            name: 'Ohau Beaches - Waipio Valley & North Shore',
+            lat: 21.438,
+            lon: -158.000,
+            dataLabels: {
+            enabled: true,
+            shape: 'callout',
+            format: '{point.name}',
+            y: 57,
+            x: 160,
+            allowOverlap: true,
+            borderWidth: 2,
+            borderColor: 'black',
+            backgroundColor: '#FFFAB1',
+            useHTML: true,
+            },
+        }],
+		}],
+});
+</script>
+</html>
